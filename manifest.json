@@ -4,11 +4,20 @@
   "name": "TODO Extension",
   "description": "TODO Extension",
   "permissions": [
-    "storage"
+    "alarms",
+    "storage",
+    "https://*/*"
   ],
   "content_security_policy": "script-src 'self' https://ajax.googleapis.com; object-src 'self'",
+  "background":{
+    "scripts":[
+      "jquery.min.js",
+      "background.js"
+    ],
+    "persistent": true
+  },
   "options_ui": {
-    "page": "settings.html",
+    "page": "options.html",
     "open_in_tab": true
   }
 }
